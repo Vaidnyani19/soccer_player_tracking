@@ -60,4 +60,5 @@ def get_match_image(filename):
     return send_file(os.path.join(MATCHES_FOLDER, filename))
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=10000)
+
