@@ -42,7 +42,7 @@ def upload_video():
 
     broadcast_file.save(broadcast_path)
     tacticam_file.save(tacticam_path)
-
+    
     # Run detection, ReID, and matching
     subprocess.run(['python', 'main.py'])
     subprocess.run(['python', 'visualize_matches.py'])
@@ -60,7 +60,7 @@ def get_match_image(filename):
     return send_file(os.path.join(MATCHES_FOLDER, filename))
 
 if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 10000))
+    port = int(os.environ.get("PORT", 8080))  # Railway will pass this automatically
+    print(f"Running on port {port}...")
     app.run(host='0.0.0.0', port=port)
-
 
