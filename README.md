@@ -52,8 +52,8 @@ A complete web-based system for soccer player tracking and re-identification usi
 
 git clone https://github.com/yourusername/soccer-player-tracking.git
 cd soccer-player-tracking
-2. Install Dependencies
 
+2. Install Dependencies
 pip install -r requirements.txt
 📌 Recommended: Use Python 3.8 or 3.9
 
